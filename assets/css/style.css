@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Integral CF";
+  src:  url(../fonts/IntegralCF/IntegralCFBoldRegular.woff2) format("woff2"), 
+        url(../fonts/IntegralCF/IntegralCFBoldRegular.woff) format("woff");
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+p, a{
+  font-family: "Satoshi", sans-serif;
+}
+
+p{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.promo{
+  display: flex;
+  height: 8.5vh;
+}
+
+.promo p{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 0.78rem;
+  align-items: center;
+  font-weight: 100;
+}
+
+.underline{
+  color: white;
+  font-weight: 400;
+}
+
+.navbar-container{
+  display: flex;
+  padding: 5vh 4.5vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .nav-left{
+    display: flex;
+    align-items: center;
+    gap: 4.5vw;
+  }
+
+  .menu-btn{
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-btn img{
+    width: 5.3vw;
+  }
+
+  .logo{
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img{
+    width: 32.2vw;
+  }
+
+  .nav-menu{
+    list-style: none;
+    display: none;
+    /* display: flex;
+    justify-content: space-between;
+    gap: 2vw; */
+  }
+
+    .nav-menu li a{
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-menu li a:hover{
+      opacity: 0.7;
+    }
+  
+  .search{
+    display: flex;
+  }
+
+  .searchbar{
+    display: none;
+  }
+
+  .nav-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.5vw;
+  }
+
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 218.8vh;
+  max-width: 100%;
+  padding: 7.9vh 4.2vw;
+  
+  .letters{
+    display: flex;
+    flex-direction: column;
+    gap: 4.5vh;
+    width: 100%;
+    
+    & h1{
+      font-family: "Integral CF", sans-serif;
+      font-size: 2.25em;
+      line-height: 2.1rem;
+
+    }
+    
+    & > p{
+      font-size: 0.85rem;
+      font-weight: 400;
+      max-width: 99%;
+      line-height: 1.2rem;
+    }
+    
+    & button{
+      font-size: 1rem;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 400;
+      color: white;
+      width: 100%;
+      padding: 3.6vh;
+      background-color: black;
+      border-radius: 62px;
+      border: none;
+    }
+    
+    & button:hover{
+      cursor: pointer;
+    }
+    
+    .features{
+      display: flex;
+      justify-content: space-around;
+      gap: 2.2vw;
+      flex-wrap: wrap;
+      margin: 0vh 8vw;
+
+      & div{
+        height: 13vh;
+      }
+
+      & .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      & .number{
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: black;
+      }
+      
+      & .sentence{
+        font-size: 0.75rem;
+      }
+      
+      & .slash{
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 1px;
+      }
+
+      & .right{
+        display: none;
+      }
+    }
+  }
+
+  & .models{
+    background: url(../media/img/models-big.jpg) no-repeat -1.5vw -9.3vh / cover;
+    height: 100%;
+    width: 130%;
+  }
+}
+
+.brands{
+  width: 100%;
+  background-color: block;
+}
+
+
+.new-arrivals img, .top-selling img{
+  width: 300px;
+}
+
+@media (min-width: 1024px){
+  html{
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 768px){
+  .search{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    background-color: #f0f0f0;
+    border-radius: 62px;
+    padding: 12px 16px;
+    height: 48px;
+    flex: 0 1 585px;
+  }
+
+  .search img{
+  opacity: 40%;
+  width: 22px;
+  margin-right: 10px;
+  }
+
+  .searchbar{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: "Satoshi", sans-serif;
+  }
+
+  .searchbar::placeholder{
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
