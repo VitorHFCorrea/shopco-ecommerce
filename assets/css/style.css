@@ -229,7 +229,10 @@ p{
   display: flex;
   flex-direction: column;
   gap: 2.8vh;
-  padding: 6vh 4.2vw 4.5vh 4.2vw;
+  padding: 6vh 0 4.5vh 0;
+  overflow: hidden;
+  width: 100%;
+
 
   h2{
     font-family: "Integral CF", sans-serif;
@@ -238,16 +241,19 @@ p{
     padding-bottom: 1vh;
   }
 
-  .product-carousel{
+  .product-carrousel{
     display: flex;
-    justify-content: space-between;
-    width: fit-content;
     gap: 3.9vw;
-
-
+    overflow-x: auto;
+    padding: 0 3.9vw 0 3.9vw;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
     .product{
       display: flex;
       flex-direction: column;
+
       
       .product-image{
         display: flex;
@@ -358,8 +364,10 @@ p{
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50px;
-    width: 100vw;
+    width: 80vw;
     height: 5.5vh;
+    margin: 0 3.9vw 0 3.9vw;
+    align-self: center;
 
     &::hover{
       cursor: pointer;
