@@ -24,6 +24,12 @@ p, a{
 
 p{
   color: rgba(0, 0, 0, 0.6);
+  font-size: 0.75rem;
+}
+
+h2{
+  font-family: "Integral CF", sans-serif;
+  font-size: 2rem;
 }
 
 .promo{
@@ -36,7 +42,6 @@ p{
     justify-content: center;
     background-color: black;
     color: white;
-    font-size: 0.78rem;
     align-items: center;
     font-weight: 100;
   }
@@ -134,7 +139,7 @@ p{
     }
     
     & > p{
-      font-size: 0.85rem;
+      font-size: 0.875rem;
       font-weight: 400;
       max-width: 99%;
       line-height: 1.2rem;
@@ -233,10 +238,7 @@ p{
   overflow: hidden;
   width: 100%;
 
-
   h2{
-    font-family: "Integral CF", sans-serif;
-    font-size: 2rem;
     text-align: center;
     padding-bottom: 1vh;
   }
@@ -246,6 +248,7 @@ p{
     gap: 3.9vw;
     overflow-x: auto;
     padding: 0 3.9vw 0 3.9vw;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -253,12 +256,13 @@ p{
     .product{
       display: flex;
       flex-direction: column;
+      width: 55.063%;
+      aspect-ratio: 1 / 1.0102;
 
-      
       .product-image{
         display: flex;
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
         border-radius: 13.42px;
         justify-content: center;
@@ -266,7 +270,7 @@ p{
         background-color: #f0f0f0;
 
         img{
-          width: 200px;
+          width: 51.282vw;
         }
       }
 
@@ -280,7 +284,7 @@ p{
         & > p{
           color: black;
           font-weight: 700;
-          font-size: 1.01rem;
+          font-size: 1rem;
         }
   
         .score{
@@ -294,43 +298,39 @@ p{
             height: 1.8vh;
           }
   
-          & > p{
-            font-size: 0.77rem;
+          p{
+            font-size: 0.75rem;
             color: black;
   
             span{
-              font-weight: 400;
               font-family: "Satoshi", sans-serif;
+              font-weight: 400;
               color: rgba(0, 0, 0, 0.6);
             }
           }
         }
   
-        .price, .price-container{
+        .price, .price-container p{
           font-size: 1.25rem;
+          color: black;
+          font-weight: 700;
         }
   
         .price-container{
           display: flex;
           align-items: center;
           justify-content: space-between;
-          width: 39.5vw;
-          
-          .price{
-            color: black;
-            font-weight: bold;
-          }
-  
+          width: 65%;
+
           .old-price{
             position: relative;
             color: rgba(0, 0, 0, 0.4);
-            font-weight: 700;
   
             &::after{
               content: "";
               position: absolute;
               left: 0;
-              top: 50%;
+              top: 55%;
               width: 100%;
               height: 1px;
               background-color: #999999;
@@ -342,29 +342,31 @@ p{
             color: red;
             background-color: rgba(255, 0, 0, 0.1);
             border-radius: 62px;
-            font-size: 0.6rem;
-            padding: 0.5vh 2vw;
+            font-size: 0.625rem;
+            padding: 3% 7%;
           }
-  
         }
       }
       
     }
     .jeans > .product-image img{
-      padding: 0px 3vw;
+      transform: scale(0.8);
     }
 
     .black-jeans > .product-image img{
-      padding: 0px 4vw;
+      transform: scale(0.8);
     }
   }
 
   button{
     color: black;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    font-size: 0.88rem;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50px;
-    width: 80vw;
+    width: 92%;
     height: 5.5vh;
     margin: 0 3.9vw 0 3.9vw;
     align-self: center;
@@ -379,9 +381,85 @@ p{
   border: none;
   background-color: rgba(0, 0, 0, 0.1);
   height: 1px;
-  margin: 0vh 4.2vw;
+  margin: 0vh 4.2vw -1.2vh 4.2vw;
 }
 
+.browse-style{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75%;
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  margin: 4.103%;
+  padding: 6.5% 6.155%;
+  height: 115.63vh;
+  
+  h2{
+    text-align: center;
+    margin-top: 4.1%;
+    margin-bottom: 3.8%;
+  }
+
+  .category{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      position: absolute;
+    }
+
+    p{
+      font-size: 1.5rem;
+      color: black;
+      font-weight: 700;
+      top: 10%;
+      left: 7%; 
+      position: absolute;
+    }
+  }
+  
+  .casual img{
+    transform: scale(2.24) scaleX(-1);
+    top: 11%;
+    right: 8%;
+  }
+
+  .formal img{
+    transform: scale(2.48);
+    top: 28.21%;
+    left: 58%;
+  }
+
+  .party img{
+    transform: scale(1.62);
+    bottom: 11%;
+    left: 15.5%;
+  }
+
+  .gym img{
+    transform: scale(2.25);
+    top: 14.5%;
+    left: 20.5%;
+  }
+}
+
+.feedback-top-container{
+  display: flex;
+  align-items: flex-end;
+
+  .nav-buttons{
+    display: flex;
+    width: 1vw;
+  }
+}
 
 @media (min-width: 1024px){
   html{
