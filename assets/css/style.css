@@ -14,20 +14,34 @@
 
 body{
   min-height: 100vh;
-  overflow-x: hidden;
   font-size: 16px;
 }
 
-p, a{
+p, a, input, input::placeholder, button {
   font-family: "Satoshi", sans-serif;
 }
 
-p{
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 0.75rem;
+p, a, input, input::placeholder{
+  font-weight: 400;
 }
 
-h2{
+p, a, input{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a{
+  text-decoration: none;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+button {
+  font-weight: 500;
+}
+
+h1, h2 {
   font-family: "Integral CF", sans-serif;
   font-size: 2rem;
 }
@@ -37,6 +51,7 @@ h2{
   height: 8.2vh;
   
   p{
+    font-size: 0.75rem;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -49,6 +64,7 @@ h2{
   .underline{
     color: white;
     font-weight: 400;
+    text-decoration: underline;
   }
 }
 
@@ -133,7 +149,6 @@ h2{
     width: 100%;
     
     & > h1{
-      font-family: "Integral CF", sans-serif;
       font-size: 2.25em;
       line-height: 2.1rem;
     }
@@ -141,7 +156,6 @@ h2{
     & > p{
       font-size: 0.875rem;
       font-weight: 400;
-      max-width: 99%;
       line-height: 1.2rem;
     }
     
@@ -243,7 +257,7 @@ h2{
     padding-bottom: 1vh;
   }
 
-  .product-carrousel{
+  .product-carousel{
     display: flex;
     gap: 3.9vw;
     overflow-x: auto;
@@ -451,13 +465,226 @@ h2{
   }
 }
 
-.feedback-top-container{
-  display: flex;
-  align-items: flex-end;
+.feedback-carousel-container{
+  padding: 16px;
+  overflow: hidden;
 
-  .nav-buttons{
+  .feedback-top-container{
     display: flex;
-    width: 1vw;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .nav-buttons{
+      display: flex;
+      gap: 5.1vw;
+
+      img{
+        width: 19px;
+      }
+
+      button{
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .feedbacks{
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    width: 100vw;
+
+    .comment{
+      padding: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      height: 186px;
+      width: 100%;
+      overflow: ;
+
+      display: flex;
+      flex-direction: column;
+
+      .user{
+        display: flex;
+        align-items: center;
+        
+        .name{
+          font-weight: 700;
+          color: black;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.newsletter-section{
+  background: linear-gradient(to bottom, white 50%, #F0F0F0 50%);
+  padding: 16px;
+
+  .newsletter-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+  
+    .subscribe{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      .email-input{
+        display: flex;
+        align-items: center;
+        border-radius: 62px;
+        background-color: white;
+        height: 35px;
+        
+        img{
+          margin: 15px 10px 15px 15px;
+        }
+    
+        .email-field{
+          outline: none; 
+          border: none;
+          width: 80%;
+        }
+      }
+  
+      button{
+        border: none;
+        background-color: white;
+        border-radius: 62px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+footer{
+  background-color: #F0F0F0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+
+  p{
+    font-size: 0.875rem;
+  }
+
+  .info{
+    margin: 0px 0px 40px 0px;
+
+    .store{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .social{
+      display: flex;
+      gap: 14px;
+      margin: 20px 0px 24px 0px;
+
+      a{
+        display: flex;
+        align-items: center;
+        border-radius: 62px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 7px;
+        width: 27px;
+        aspect-ratio: 1 / 1;
+        background-color: white;
+      }
+      
+      img{
+        width: 100%;
+        aspect-ratio: 1 / 1;
+      }
+
+      .facebook-icon{
+        background-color: black;
+      }
+
+      #twitter-icon{
+        position: relative;
+        left: 1px;
+      }
+    }
+
+    .support-links{
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 24px;
+      font-size: 0.875rem;
+
+      
+      h3{
+        font-size: 0.875rem;
+        font-family: "Satoshi", sans-serif;
+        font-weight: 500;
+        letter-spacing: 3px;
+      }
+
+      .services-list{
+        width: calc(50vw - 16px);
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+
+  .copyright-and-payment{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+      margin: 16px 0px
+    }
+
+    .payment{
+      display: flex;
+      gap: 10.29px;
+
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        background-color: white;
+        border-radius: 4px;
+        
+        img{
+          padding: 5px;
+          width: 100%;
+        }
+        
+        #visa-logo{
+          width: 95%;
+        }
+
+        #mastercard-logo{
+          width: 80%;
+        }
+
+        #applepay-logo{
+          width: 83%;
+        }
+
+        #gpay-logo{
+          width: 87%;
+        }
+      }
+    }
   }
 }
 
@@ -495,7 +722,5 @@ h2{
     font-family: "Satoshi", sans-serif;
   }
 
-  .searchbar::placeholder{
-    color: rgba(0, 0, 0, 0.4);
-  }
+
 }
