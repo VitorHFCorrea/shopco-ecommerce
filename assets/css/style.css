@@ -5,7 +5,13 @@
 }
 
 :root {
-  --padding-16px: 4.103vw; /* Defina o valor do padding como quiser */
+  --hzdistance-16px: 4.103vw;
+  --white: white;
+  --off-white: #f0f0f0;
+  --black-100: rgb(0, 0, 0);
+  --black-60: rgba(0, 0, 0, 0.6);
+  --black-40: rgba(0, 0, 0, 0.4);
+  --translucid-10: rgba(0, 0, 0, 0.1);
 }
 
 *{
@@ -30,7 +36,7 @@ p, a, input, input::placeholder{
 }
 
 p, a, input{
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--black-60)
 }
 
 a{
@@ -38,11 +44,20 @@ a{
 }
 
 input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--black-40);
 }
 
 button {
   font-weight: 500;
+  font-size: 0.875rem;
+  background-color: var(--white);
+  border: 1px solid var(--translucid-10);
+  border-radius: 62px;
+  width: 100%;
+  
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 h1, h2 {
@@ -65,14 +80,14 @@ header{
       display: flex;
       width: 100%;
       justify-content: center;
-      background-color: black;
-      color: white;
+      background-color: var(--black-100);
+      color: var(--white);
       align-items: center;
       font-weight: 100;
     }
     
     .underline{
-      color: white;
+      color: var(--white);
       font-weight: 400;
       text-decoration: underline;
     }
@@ -83,12 +98,12 @@ header{
     justify-content: space-between;
     width: 100%;
     flex-grow: 1;      
-    padding-inline: var(--padding-16px);
+    padding-inline: var(--hzdistance-16px);
       
     .nav-left{
       display: flex;
       align-items: center;
-      gap: 4.103vw;
+      gap: var(--hzdistance-16px);
       height: 100%;
       
       .menu-btn{
@@ -98,6 +113,7 @@ header{
         border: none;
         cursor: pointer;
         height: 24%;
+        width: fit-content;
         
         img{
           width: 100%;
@@ -150,14 +166,13 @@ header{
   }
 }
 
-
 .banner{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: var(--off-white);
   max-width: 100vh;
-  padding: 3.7vh var(--padding-16px) 0 var(--padding-16px);
+  padding: 3.7vh var(--hzdistance-16px) 0 var(--hzdistance-16px);
   
   .letters{
     display: flex;
@@ -177,20 +192,12 @@ header{
     }
     
     button{
+      color: var(--white);
       font-size: 1rem;
-      font-family: "Satoshi", sans-serif;
-      font-weight: 400;
-      color: white;
-      width: 100%;
-      padding: 1.8vh;
+      height: 3.25rem;
       margin-block: 0.8vh 2.5vh;
-      background-color: black;
-      border-radius: 62px;
+      background-color: var(--black-100);
       border: none;
-      
-      &:hover{
-        cursor: pointer;
-      }
     }
     
     .features{
@@ -213,7 +220,7 @@ header{
       .number{
         font-weight: bolder;
         font-size: 1.5rem;
-        color: black;
+        color: var(--black-100);
       }
       
       .sentence{
@@ -221,7 +228,7 @@ header{
       }
       
       .slash{
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: var(--translucid-10);
         width: 1px;
       }
 
@@ -262,18 +269,17 @@ header{
       top: 8%;
       right: 5%;
     }
-
   }
 }
 
 .brands{
   height: 17vh;
   width: 100%;
-  background-color: black;
+  background-color: var(--black-100);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.3vh;
+  gap: 2.647vh;
 
   .line{
     display: flex;
@@ -293,7 +299,7 @@ header{
   display: flex;
   flex-direction: column;
   gap: 2.8vh;
-  padding: 6vh 0 4.5vh 0;
+  padding-block: 6vh 4.739vh;
   overflow: hidden;
   width: 100%;
 
@@ -306,7 +312,7 @@ header{
     display: flex;
     gap: 3.9vw;
     overflow-x: auto;
-    padding: 0 3.9vw 0 3.9vw;
+    padding-inline: 3.9vw;
     scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
@@ -326,7 +332,7 @@ header{
         border-radius: 13.42px;
         justify-content: center;
         align-items: center;
-        background-color: #f0f0f0;
+        background-color: var(--off-white);
 
         img{
           width: 51.282vw;
@@ -341,7 +347,7 @@ header{
         padding-top: 1.1vh;
 
         & > p{
-          color: black;
+          color: var(--black-100);
           font-weight: 700;
           font-size: 1rem;
         }
@@ -359,31 +365,30 @@ header{
   
           p{
             font-size: 0.75rem;
-            color: black;
+            color: var(--black-100);
   
             span{
               font-family: "Satoshi", sans-serif;
               font-weight: 400;
-              color: rgba(0, 0, 0, 0.6);
+              color: var(--black-60);
             }
           }
         }
   
         .price, .price-container p{
           font-size: 1.25rem;
-          color: black;
+          color: var(--black-100);
           font-weight: 700;
         }
   
         .price-container{
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          width: 65%;
+          gap: 1.282vw;
 
           .old-price{
             position: relative;
-            color: rgba(0, 0, 0, 0.4);
+            color: var(--black-40);
   
             &::after{
               content: "";
@@ -402,43 +407,32 @@ header{
             background-color: rgba(255, 0, 0, 0.1);
             border-radius: 62px;
             font-size: 0.625rem;
-            padding: 3% 7%;
+            padding: 1.5% 4.5%;
           }
         }
       }
       
     }
     .jeans > .product-image img{
-      transform: scale(0.8);
+      transform: scale(0.9);
     }
 
     .black-jeans > .product-image img{
-      transform: scale(0.8);
+      transform: scale(0.84);
     }
   }
 
   button{
-    color: black;
-    font-family: "Satoshi", sans-serif;
-    font-weight: 500;
     font-size: 0.88rem;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    width: 92%;
-    height: 5.5vh;
-    margin: 0 3.9vw 0 3.9vw;
+    height: 2.875rem;
     align-self: center;
-
-    &::hover{
-      cursor: pointer;
-    }
+    width: 92%;
   }
 }
 
 .separator{
   border: none;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--translucid-10);
   height: 1px;
   margin: 0vh 4.2vw -1.2vh 4.2vw;
 }
@@ -448,16 +442,15 @@ header{
   flex-direction: column;
   align-items: center;
   gap: 1.75%;
-  background-color: #F0F0F0;
+  background-color: var(--off-white);
   border-radius: 20px;
-  margin: 4.103%;
+  margin: 3% var(--hzdistance-16px);
   padding: 6.5% 6.155%;
   height: 115.63vh;
   
   h2{
     text-align: center;
-    margin-top: 4.1%;
-    margin-bottom: 3.8%;
+    margin-block: 4.1% 3.7%;
   }
 
   .category{
@@ -466,7 +459,7 @@ header{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--white);
     
     img{
       height: 100%;
@@ -477,7 +470,7 @@ header{
 
     p{
       font-size: 1.5rem;
-      color: black;
+      color: var(--black-100);
       font-weight: 700;
       top: 10%;
       left: 7%; 
@@ -488,30 +481,30 @@ header{
   .casual img{
     transform: scale(2.24) scaleX(-1);
     top: 11%;
-    right: 8%;
+    right: 12.5%;
   }
 
   .formal img{
     transform: scale(2.48);
     top: 28.21%;
-    left: 58%;
+    left: 59%;
   }
 
   .party img{
     transform: scale(1.62);
     bottom: 11%;
-    left: 15.5%;
+    left: 13%;
   }
 
   .gym img{
     transform: scale(2.25);
     top: 14.5%;
-    left: 20.5%;
+    left: 19%;
   }
 }
 
 .feedback-carousel-container{
-  padding: 16px;
+  padding: var(--hzdistance-16px);
   overflow: hidden;
 
   .feedback-top-container{
@@ -543,11 +536,11 @@ header{
 
     .comment{
       padding: 24px;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--translucid-10);
       border-radius: 20px;
       height: 186px;
       width: 100%;
-      overflow: ;
+      /* overflow: ; */
 
       display: flex;
       flex-direction: column;
@@ -558,7 +551,7 @@ header{
         
         .name{
           font-weight: 700;
-          color: black;
+          color: var(--black-100);
           font-size: 1.25rem;
         }
       }
@@ -567,15 +560,15 @@ header{
 }
 
 .newsletter-section{
-  background: linear-gradient(to bottom, white 50%, #F0F0F0 50%);
-  padding: 16px;
+  background: linear-gradient(to bottom, var(--white) 50%, var(--off-white) 50%);
+  padding: var(--hzdistance-16px);
 
   .newsletter-container{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: black;
-    color: white;
+    background-color: var(--black-100);
+    color: var(--white);
     border-radius: 20px;
     padding: 30px 25px;
   
@@ -587,8 +580,9 @@ header{
       .email-input{
         display: flex;
         align-items: center;
+        border: none;
         border-radius: 62px;
-        background-color: white;
+        background-color: var(--white);
         height: 35px;
         
         img{
@@ -604,7 +598,7 @@ header{
   
       button{
         border: none;
-        background-color: white;
+        background-color: var(--off-white);
         border-radius: 62px;
         height: 35px;
       }
@@ -613,7 +607,7 @@ header{
 }
 
 footer{
-  background-color: #F0F0F0;
+  background-color: var(--off-white);
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -653,7 +647,7 @@ footer{
       }
 
       .facebook-icon{
-        background-color: black;
+        background-color: black; 
       }
 
       #twitter-icon{
@@ -744,7 +738,7 @@ footer{
     display: flex;
     align-items: center;
     width: max-content;
-    background-color: #f0f0f0;
+    background-color: var(--off-white);
     border-radius: 62px;
     padding: 12px 16px;
     height: 48px;
