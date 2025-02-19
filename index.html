@@ -9,11 +9,17 @@
   <link rel="apple-touch-icon" sizes="180x180" href="assets/media/icons/favicons/apple-touch-icon.png">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css" media="screen">
 </head>
 <body>
   <header>
     <div class="promo">
-      <p>Sign up and get 20% off to your first order.&nbsp;<a href="#" class="underline">Sign Up Now</a></p>
+      <div class="text">
+        <p>Sign up and get 20% off to your first order.&nbsp;<a href="#" class="underline">Sign Up Now</a></p>
+      </div>
+      <button class="close-btn">
+        <img src="assets/media/icons/features/close-btn.svg" alt="">
+      </button>
     </div>
 
     <nav class="navbar-container">
@@ -84,12 +90,10 @@
       
     </div>
     <div class="brands">
-      <div class="top line">
+      <div class="line">
         <img src="assets/media/img/logos/versace.svg" alt="Versace logo">
         <img src="assets/media/img/logos/zara.svg" alt="Zara logo">
         <img src="assets/media/img/logos/gucci.svg" alt="Gucci logo">
-      </div>
-      <div class="bottom line">
         <img src="assets/media/img/logos/prada.svg" alt="Prada logo">
         <img src="assets/media/img/logos/ck.svg" alt="Calvin Klein logo">
       </div>
@@ -323,9 +327,11 @@
           </div>
           <div class="user">
             <p class="name">Sarah M.</p>
-            <img src="assets/media/icons/features/verified.svg" alt="verified user icon">
+            <img class="verified" src="assets/media/icons/features/verified.svg" alt="verified user icon">
           </div>
-          <p class="note">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+          <div class="note">
+            <p>“I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
+          </div>
         </div>
         <div class="comment c2">
           <div class="rating">
@@ -337,9 +343,11 @@
           </div>
           <div class="user">
             <p class="name">Alex K.</p>
-            <img src="assets/media/icons/features/verified.svg" alt="verified user icon">
+            <img class="verified" src="assets/media/icons/features/verified.svg" alt="verified user icon">
           </div>
-          <p class="note">"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”</p>
+          <div class="note">
+            <p>“Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”</p>
+          </div>
         </div>
         <div class="comment c3">
           <div class="rating">
@@ -351,9 +359,11 @@
           </div>
           <div class="user">
             <p class="name">James L.</p>
-            <img src="assets/media/icons/features/verified.svg" alt="verified user icon">
+            <img class="verified" src="assets/media/icons/features/verified.svg" alt="verified user icon">
           </div>
-          <p class="note">"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”</p>
+          <div class="note">
+            <p>“As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”</p>
+          </div>
         </div>
         <div class="comment c4">
           <div class="rating">
@@ -365,9 +375,11 @@
           </div>
           <div class="user">
             <p class="name">Mooen</p>
-            <img src="assets/media/icons/features/verified.svg" alt="verified user icon">
+            <img class="verified" src="assets/media/icons/features/verified.svg" alt="verified user icon">
           </div>
-          <p class="note">"I've never felt more confident in my outfits since I started shopping here. The variety of styles, from trendy to timeless, ensures I always find something perfect for any occasion. The quality is simply outstanding!"</p>
+          <div class="note">
+            <p>“I've never felt more confident in my outfits since I started shopping here. The variety of styles, from trendy to timeless, ensures I always find something perfect for any occasion. The quality is simply outstanding!”</p>
+          </div>
         </div>
         <div class="comment c5">
           <div class="rating">
@@ -379,21 +391,23 @@
           </div>
           <div class="user">
             <p class="name">Olivia B.</p>
-            <img src="assets/media/icons/features/verified.svg" alt="verified user icon">
+            <img class="verified" src="assets/media/icons/features/verified.svg" alt="verified user icon">
           </div>
-          <p class="note">"Shopping at Shop.co has completely transformed my wardrobe. The attention to detail, quality fabrics, and stylish designs make every purchase a joy. I always receive compliments on the pieces I buy from them!"</p>
+          <div class="note">
+            <p>“Shopping at Shop.co has been a game-changer! The clothing is stylish, well-made, and always on-trend. No matter the occasion, I can count on them to have the perfect piece that makes me feel confident.”</p>
+          </div>
         </div>
       </div>
     </div>
     <div class="newsletter-section">
       <div class="newsletter-container">
-        <h2>STAY UP TO DATE ABOUT OUR <br>LATEST OFFERS</h2>
-        <div class="subscribe">
-          <div class="email-input">
+        <h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
+        <div class="subscribe-field">
+          <div class="email-field">
             <img src="assets/media/icons/features/email-letter.svg" alt="">
-            <input type="text" class="email-field" placeholder="Enter your email address">
+            <input type="text" class="email-input" placeholder="Enter your email address">
           </div>
-          <button>Subscribe to Newsletter</button>
+          <button id="subscribe-button">Subscribe to Newsletter</button>
         </div>
       </div>
     </div>
@@ -404,21 +418,20 @@
       <div class="store">
         <h2>SHOP.CO</h2>
         <p>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
-      </div>
-
-      <div class="social">
-        <a href="#">
-          <img src="assets/media/icons/social/twitter.svg" id="twitter-icon" alt="twitter icon">
-        </a>
-        <a href="#" class="facebook-icon">
-          <img src="assets/media/icons/social/facebook.svg" class="facebook-icon" alt="facebook icon">
-        </a>
-        <a href="#">
-          <img src="assets/media/icons/social/instagram.svg" alt="instagram icon">
-        </a>
-        <a href="#">
-          <img src="assets/media/icons/social/github.svg" alt="github icon">
-        </a>
+        <div class="social">
+          <a href="#">
+            <img src="assets/media/icons/social/twitter.svg" id="twitter-icon" alt="twitter icon">
+          </a>
+          <a href="#" class="facebook-icon">
+            <img src="assets/media/icons/social/facebook.svg" class="facebook-icon" alt="facebook icon">
+          </a>
+          <a href="#">
+            <img src="assets/media/icons/social/instagram.svg" alt="instagram icon">
+          </a>
+          <a href="#">
+            <img src="assets/media/icons/social/github.svg" alt="github icon">
+          </a>
+        </div>
       </div>
 
       <div class="support-links">
@@ -479,5 +492,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="assets/js/index.js"></script>
 </body>
 </html>

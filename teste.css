@@ -1,8 +1,0 @@
-img{
-  width: 50px;
-}
-
-h1 {
-  font-family: 'Arial', sans-serif;
-  transform: scaleX(1.5) scaleY(1); /* Torna a fonte mais longa horizontalmente e mais baixa */
-}
